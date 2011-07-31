@@ -46,7 +46,7 @@ class jQueryUIPlugin extends MantisPlugin {
 	 */
 	function resources( $p_event ) {
 		return '<script type="text/javascript" src="' . plugin_file( 'jquery-ui-min.js' ) . '"></script>'.
-			'<link rel="stylesheet" type="text/css" href="'. plugin_file('jquery-ui.css') .' "></link>';
+			'<link rel="stylesheet" type="text/css" href="'. plugin_file('jquery-ui.css') .'"></link>';
 	}
 }
 
