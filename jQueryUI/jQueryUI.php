@@ -41,11 +41,26 @@ class jQueryUIPlugin extends MantisPlugin {
 		);
 	}
 
+	function config() {
+		return array (
+			'use_local' => ON
+		);
+	}
+
 	/**
 	 * Create the resource link to load the jQuery UI library.
 	 */
 	function resources( $p_event ) {
-		return '<script type="text/javascript" src="' . plugin_file( 'jquery-ui-min.js' ) . '"></script>'.
+		$t_ajax_uri = "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js";
+		$t_local_uri = plugin_file('jquery-ui-min.js');
+		$t_path = "";
+
+		if ( plugin_config_get ( 'use_local' ) == ON )
+		    $t_path = $t_local_uri;
+		else
+		    $t_path = $t_ajax_uri;
+      
+		return '<script type="text/javascript" src="' . $t_path  . '"></script>'.
 			'<link rel="stylesheet" type="text/css" href="'. plugin_file('jquery-ui.css') .'"></link>';
 	}
 }
