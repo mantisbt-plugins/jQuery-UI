@@ -45,7 +45,7 @@ class jQueryUIPlugin extends MantisPlugin {
 	 * Create the resource link to load the jQuery UI library.
 	 */
 	function resources( $p_event ) {
-		return '<script type="text/javascript" src="' . plugin_file( 'jquery-ui-min.js' ) . '"></script>'.
+		return '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>'.
 			'<link rel="stylesheet" type="text/css" href="'. plugin_file('jquery-ui.css') .'"></link>';
 	}
 }
