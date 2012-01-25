@@ -19,3 +19,5 @@
 $s_plugin_jQueryUI_ = '';
 $s_plugin_jQueryUI_title = 'jQuery UI Library';
 $s_plugin_jQueryUI_description = 'Provides access to the jQuery UI library in a single dependency.';
+$s_plugin_jQueryUI_config_title = 'jQuery UI Configuration Panel';
+$s_plugin_jQueryUI_use_local = 'Use local JavaScript instead of CDN';
