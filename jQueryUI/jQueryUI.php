@@ -43,7 +43,7 @@ class jQueryUIPlugin extends MantisPlugin {
 
 	function config() {
 		return array (
-			'use_local' => OFF
+			'use_local' => ON
 		);
 	}
 
