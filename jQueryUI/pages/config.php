@@ -1,5 +1,5 @@
 <?php
-# Mantis - a php based bugtracking system
+# Mantis - A PHP based bugtracking system
 
 # Copyright (C) 2002 - 2008  Mantis Team  - mantisbt-dev@lists.sourceforge.net
 # Copyright (C) 2012  Jacky Alcine <jacky.alcine@thesii.org>
