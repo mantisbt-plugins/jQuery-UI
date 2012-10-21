@@ -51,7 +51,7 @@ class jQueryUIPlugin extends MantisPlugin {
 	 * Create the resource link to load the jQuery UI library.
 	 */
 	function resources( $p_event ) {
-		$t_ajax_uri = "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js";
+		$t_ajax_uri = "http://ajax.googleapis.com/ajax/libs/jqueryui/".$this->version."/jquery-ui.min.js";
 		$t_local_uri = plugin_file('jquery-ui-min.js');
 		$t_path = "";
 
