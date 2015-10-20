@@ -18,7 +18,7 @@
 auth_reauthenticate();
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 
-html_page_top1( lang_get( 'plugin_jQuery_title' ) );
+html_page_top1( plugin_lang_get( 'title' ) );
 html_page_top2();
 
 print_manage_menu();
@@ -28,31 +28,29 @@ $t_isActive = ( plugin_config_get ( 'use_local' ) == ON ) ? 'checked' : '';
 
 <br/>
 <form action="<?php echo plugin_page( 'config_edit' ) ?>" method="post">
-<table align="center" class="width75" cellspacing="1">
+<table align="center" class="width50" cellspacing="1">
+	<tr>
+		<td class="form-title" colspan="2">
+			<?php echo plugin_lang_get( 'config_title' ) ?>
+		</td>
+	</tr>
 
-<tr>
-	<td class="form-title" colspan="2">
-		<?php echo lang_get( 'plugin_jQueryUI_config_title' ) ?>
-	</td>
-</tr>
+	<tr <?php echo helper_alternate_class() ?>>
+		<td class="category" width="60%">
+			<?php
+				echo plugin_lang_get( 'use_local' );
+			?>
+		</td>
+		<td width="40%">
+			<input type="checkbox" name="use_local" <?php echo $t_isActive; ?> />
+		</td>
+	</tr>
 
-<tr <?php echo helper_alternate_class() ?>>
-	<td class="category" width="60%">
-		<?php
-			echo lang_get( 'plugin_jQuery_use_local' );
-		?>
-	</td>
-	<td width="40%">
-		<input type="checkbox" name="use_local" <?php echo $t_isActive; ?> />
-	</td>
-</tr>
-
-<tr>
-	<td class="center" colspan="2">
-		<input type="submit" class="button" value="<?php echo lang_get( 'change_configuration' ) ?>" />
-	</td>
-</tr>
-
+	<tr>
+		<td class="center" colspan="2">
+			<input type="submit" class="button" value="<?php echo lang_get( 'change_configuration' ) ?>" />
+		</td>
+	</tr>
 </table>
 <form>
 
