@@ -25,10 +25,10 @@ class jQueryUIPlugin extends MantisPlugin {
         $this->name = plugin_lang_get("title");
         $this->description = plugin_lang_get("description");
 
-        $this->version = "1.9.0";
+        $this->version = "1.11.4";
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
-			'jQuery' => '1.3'
+			'jQuery' => '1.6'
 		);
 
         $this->author = "Robert Munteanu";
@@ -61,7 +61,7 @@ class jQueryUIPlugin extends MantisPlugin {
 		    $t_path = $t_ajax_uri;
       
 		return '<script type="text/javascript" src="' . $t_path  . '"></script>'.
-			'<link rel="stylesheet" type="text/css" href="'. plugin_file('jquery-ui.css') .'"></link>';
+			'<link rel="stylesheet" type="text/css" href="'. plugin_file('jquery-ui-min.css') .'"></link>';
 	}
 }
 
