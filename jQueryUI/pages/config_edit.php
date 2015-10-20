@@ -18,12 +18,9 @@
 auth_reauthenticate();
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 
-$f_use_local = gpc_get_bool( 'use_local' );
+$f_use_local = gpc_get_bool( 'use_local', false );
 
-if ( is_blank ( $f_use_local ) )
-	plugin_config_set( 'use_local' , ON );
-
-echo plugin_config_get( 'use_local' );
+plugin_config_set( 'use_local' , $f_use_local );
 
 print_successful_redirect( plugin_page( 'config', true ) );
 

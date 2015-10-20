@@ -30,7 +30,7 @@ class jQueryUIPlugin extends MantisPlugin {
 			'MantisCore' => '1.2.0',
 			'jQuery' => '1.6'
 		);
-
+		$this->page = 'config';
         $this->author = "Robert Munteanu";
         $this->contact = "robert@lmn.ro";
 	}
