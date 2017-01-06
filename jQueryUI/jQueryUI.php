@@ -25,10 +25,10 @@ class jQueryUIPlugin extends MantisPlugin {
         $this->name = plugin_lang_get("title");
         $this->description = plugin_lang_get("description");
 
-        $this->version = "1.11.4";
+        $this->version = "1.12.1";
 		$this->requires = array(
 			'MantisCore' => '1.2.0',
-			'jQuery' => '1.6'
+			'jQuery' => '1.7'
 		);
 		$this->page = 'config';
         $this->author = "Robert Munteanu";
