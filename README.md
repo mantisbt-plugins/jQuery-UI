@@ -1,6 +1,9 @@
 jQuery UI plugin for MantisBT
 -----------------------------
 
+Provides access to the jQuery UI library in a single dependency (mantisbt-1.2.x only).
+
+
 Instructions for updating
 
 - Download a new zip file
