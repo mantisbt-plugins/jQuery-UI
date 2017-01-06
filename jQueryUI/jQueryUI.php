@@ -29,7 +29,6 @@ class jQueryUIPlugin extends MantisPlugin {
 		$this->requires = array(
 			'MantisCore' => '2.0.0',
 		);
-		$this->page = 'config';
         $this->author = "Robert Munteanu";
         $this->contact = "robert@lmn.ro";
 	}
@@ -40,25 +39,19 @@ class jQueryUIPlugin extends MantisPlugin {
 		);
 	}
 
-	function config() {
-		return array (
-			'use_local' => ON
-		);
-	}
-
 	/**
 	 * Create the resource link to load the jQuery UI library.
 	 */
 	function resources( $p_event ) {
 		$t_ajax_uri = "http://ajax.googleapis.com/ajax/libs/jqueryui/".$this->version."/jquery-ui.min.js";
 		$t_local_uri = plugin_file('jquery-ui-min.js');
-		$t_path = "";
 
-		if ( plugin_config_get ( 'use_local' ) == ON )
-		    $t_path = $t_local_uri;
-		else
+		if( config_get_global( 'cdn_enabled' ) == ON ) {
 		    $t_path = $t_ajax_uri;
-      
+		} else {
+		    $t_path = $t_local_uri;
+		}
+
 		return '<script type="text/javascript" src="' . $t_path  . '"></script>'.
 			'<link rel="stylesheet" type="text/css" href="'. plugin_file('jquery-ui-min.css') .'"></link>';
 	}
